@@ -1,0 +1,32 @@
+{
+  "name": "esbuild-exp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "tailwind": "pnpx tailwindcss -i ./src/public/css/main.css -o ./src/public/css/main.min.css --watch",
+    "nodemon": "nodemon ./src/index.js",
+    "livereload": "browser-sync start --proxy \"localhost:$(grep PORT_DEV .env | cut -d '=' -f2) \"  --files \"src/views/*.html\" \"src/public/js/*.js\"",
+    "dev": "concurrently \"pnpm tailwind\" \"pnpm nodemon\" \"pnpm livereload\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dat.gui": "^0.7.7",
+    "dotenv": "^10.0.0",
+    "eta": "^1.12.3",
+    "express": "^4.17.1",
+    "three": "^0.135.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.12"
+  }
+}
