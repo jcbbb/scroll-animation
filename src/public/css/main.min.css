@@ -123,7 +123,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Roboto Mono";
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -423,6 +423,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+@font-face {
+  font-family: "Roboto Mono";
+
+  font-weight: 400;
+
+  src: url("/public/assets/fonts/RobotoMono-Regular.ttf");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+
+  font-weight: 700;
+
+  src: url("/public/assets/fonts/RobotoMono-Bold.ttf");
+
+  font-display: swap;
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -466,4 +486,60 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.bg-neutral-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
+.font-mono {
+  font-family: "Roboto Mono";
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
